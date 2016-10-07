@@ -34,7 +34,12 @@ static NSString *CellIdentifier = @"Cell";
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor orangeColor];
+//    cell.backgroundColor = [UIColor orangeColor];
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(-10,-10,64, 64)];
+    view.layer.cornerRadius = 32;
+    view.layer.borderWidth = 0.5;
+    view.layer.borderColor = [[UIColor blueColor] CGColor];
+    [cell addSubview:view];
     
     return cell;
 }

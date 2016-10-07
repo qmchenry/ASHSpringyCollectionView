@@ -30,7 +30,7 @@
     if (!(self = [super init])) return nil;
     
     self.minimumInteritemSpacing = 10;
-    self.minimumLineSpacing = 10;
+    self.minimumLineSpacing = 14;
     self.itemSize = CGSizeMake(44, 44);
     self.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     
@@ -75,7 +75,7 @@
         UIAttachmentBehavior *springBehaviour = [[UIAttachmentBehavior alloc] initWithItem:item attachedToAnchor:center];
         
         springBehaviour.length = 0.0f;
-        springBehaviour.damping = 0.8f;
+        springBehaviour.damping = 0.4f;
         springBehaviour.frequency = 1.0f;
         
         // If our touchLocation is not (0,0), we'll need to adjust our item's center "in flight"
